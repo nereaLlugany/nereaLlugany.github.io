@@ -21,7 +21,7 @@
 .header_wrapper {
     opacity: 0.7;
     background-color: #D2691E;
-    background-image: url("imatges/sweet-pastry-assortment-top-view.jpg");
+    background-image: url("/main/images/sweet-pastry-assortment-top-view.jpg");
     position: relative;
     width: 100%;
     background-size: cover;
