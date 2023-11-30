@@ -182,7 +182,7 @@
     background-color: white;
     box-shadow: 2px 2px 5px black;
     width: 70%;
-    height: 70%;
+    height: auto;
     margin: 0 60px 50px 80px;
     padding-top: 40px;
     position: relative;
