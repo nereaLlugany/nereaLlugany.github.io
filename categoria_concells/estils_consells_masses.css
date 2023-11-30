@@ -191,6 +191,13 @@
     font-family: "Lucida Handwriting";
 }
 
+.carousel-slide #img_and_p img,
+.carousel-slide #img_and_p p {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+}
+
 .carousel-slide h2 {
     margin: 80px 0;
     border-bottom: dashed;
