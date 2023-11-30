@@ -147,9 +147,8 @@
     flex-direction: column;
     align-items: center;
     transition: transform 0.5s ease-in-out;
-    max-width: 80%;
+    max-width: 100%;
     width:80%;
-    
   }
 
 .arrow {
@@ -251,12 +250,17 @@
     .dropdownButton {
         margin-top: 50px;
     }
+
+   .arrow {
+     position: static;
+     display: block;
+     margin: 10px auto;
+     top: auto;
+     left: auto;
+     right: auto;
+   }
     .prev {
         left: 65px;
-    }
-
-    .arrow {
-        top: 450px;
     }
 
     .next {
