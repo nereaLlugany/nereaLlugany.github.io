@@ -178,5 +178,5 @@ però en veritat hauria dé veure's quan apretes el botó LLegir Més */
 /* Visualització de la secció de recomenacions */
 #right_components {
     flex: 1;
-    order: 4;
+    order: 3;
 }
