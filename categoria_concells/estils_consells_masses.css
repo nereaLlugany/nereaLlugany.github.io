@@ -261,9 +261,10 @@
     .next {
         right: 45px;
     }
-    .carousel {
-        width: 100%;
+    .carousel-container, .carousel-slide #img_and_p, .carousel-slide {
+        width: 80%;
         height: auto;
+        margin: 0 auto;
     }
 
 }
