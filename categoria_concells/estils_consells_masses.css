@@ -8,7 +8,6 @@
     font-family: Arial, Helvetica, sans-serif;
     flex-flow: row wrap;
     display: flex;
-    
     background-color: #FFDAB9;
 }
 
@@ -134,8 +133,7 @@
 .carousel-container {
     display: flex;
     overflow: hidden;
-    width: 100%
-    max-width: 800px;
+    width: 800px;
     height: 900px;
     margin: 0 auto;
     order: 4;
@@ -148,8 +146,6 @@
     flex-direction: column;
     align-items: center;
     transition: transform 0.5s ease-in-out;
-    max-width: 100%;
-    width:80%;
   }
 
 .arrow {
@@ -183,8 +179,7 @@
 .carousel-slide #img_and_p {
     background-color: white;
     box-shadow: 2px 2px 5px black;
-    width:100%;
-    max-width: 700px;
+    width: 700px;
     height: 700px;
     margin: 0 60px 50px 80px;
     padding-top: 40px;
@@ -251,20 +246,15 @@
     .dropdownButton {
         margin-top: 50px;
     }
-
-   .arrow {
-     top: 450px;
-   }
     .prev {
         left: 65px;
+    }
+
+    .arrow {
+        top: 450px;
     }
 
     .next {
         right: 45px;
     }
-    .carousel-container, .carousel-slide #img_and_p, .carousel-slide {
-        margin: 0 auto;
-        width:50%;
-    }
-
 }
