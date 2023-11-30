@@ -180,8 +180,9 @@
 .carousel-slide #img_and_p {
     background-color: white;
     box-shadow: 2px 2px 5px black;
-    width: 700px;
-    height: 700px;
+    wwidth: 100%;
+    max-width: 700px;
+    height: auto;
     margin: 0 60px 50px 80px;
     padding-top: 40px;
     position: relative;
@@ -246,6 +247,9 @@
     
     .dropdownButton {
         margin-top: 50px;
+    }
+    .carousel-slide #img_and_p {
+        max-width: 100%;
     }
     .prev {
         left: 65px;
