@@ -133,7 +133,7 @@
 .carousel-container {
     display: flex;
     overflow: hidden;
-    width: 80%;
+    width: 800px;
     height: 900px;
     margin: 0 auto;
     order: 4;
