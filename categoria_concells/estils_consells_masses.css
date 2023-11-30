@@ -160,6 +160,7 @@
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 50%;
+    bottom: 20px;
 }
 
 .arrow i {
@@ -253,7 +254,11 @@
     }
 
     .arrow {
+        position: relative;
         top: 450px;
+        display: block;
+        margin: 0 auto;
+        bottom: auto;
     }
 
     .next {
