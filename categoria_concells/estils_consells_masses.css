@@ -209,13 +209,15 @@
 
 .carousel-slide p {
     padding: 5px 5px 15px 5px;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     margin: 0 auto;
     font-size: 0.75em;
 }
 
 .carousel-slide .image_container {
-    width: 375px;
+    width: 100%;
+    max-width: 375px;
     height: 375px;
     margin: 0 auto;
     margin-top: 20px;
