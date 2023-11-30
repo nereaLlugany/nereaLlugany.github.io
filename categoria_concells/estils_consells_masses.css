@@ -87,8 +87,8 @@
     animation-name: fadeIn;
     animation-duration: 0.5s;
   }
-
-  /* Animació per simular el dropdown menu */  
+  
+  /* Animació per simular el dropdown menu */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -169,11 +169,11 @@
 }
 
 .prev {
-    left: 200px;
+    left: 285px;
 }
 
 .next {
-    right: 200px;
+    right: 255px;
 }
 
 .carousel-slide #img_and_p {
