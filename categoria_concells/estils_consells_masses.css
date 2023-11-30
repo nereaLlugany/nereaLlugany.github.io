@@ -1,3 +1,4 @@
+/* El contingut principal de la secció consells i trucs */
 * {
     padding: 0;
     margin: 0;
@@ -130,14 +131,14 @@
 
 /* Estilització del contingut principal amb els consells/trucs */
 .carousel-container {
-  position: relative;
-  overflow: hidden;
-  width: 80%px;
-  height: 90%px;
-  margin: 0 auto;
-  order: 4;
-  text-align: center;
-  justify-content: center;
+    display: flex;
+    overflow: hidden;
+    width: 800px;
+    height: 900px;
+    margin: 0 auto;
+    order: 4;
+    text-align: center;
+    justify-content: center;
 }
 
 .carousel-slide {
@@ -179,9 +180,8 @@
 .carousel-slide #img_and_p {
     background-color: white;
     box-shadow: 2px 2px 5px black;
-    wwidth: 100%;
-    max-width: 700px;
-    height: auto;
+    width: 700px;
+    height: 700px;
     margin: 0 60px 50px 80px;
     padding-top: 40px;
     position: relative;
