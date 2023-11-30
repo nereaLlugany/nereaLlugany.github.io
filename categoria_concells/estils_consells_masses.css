@@ -182,20 +182,14 @@
 .carousel-slide #img_and_p {
     background-color: white;
     box-shadow: 2px 2px 5px black;
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     height: 700px;
     margin: 0 60px 50px 80px;
     padding-top: 40px;
     position: relative;
     border-radius: 20px;
     font-family: "Lucida Handwriting";
-}
-
-.carousel-slide #img_and_p img,
-.carousel-slide #img_and_p p {
-    flex: 1;
-    width: 100%;
-    max-width: 100%;
 }
 
 .carousel-slide h2 {
