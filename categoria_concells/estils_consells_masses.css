@@ -133,14 +133,16 @@
 .carousel-container {
     display: flex;
     overflow: hidden;
-    width: 800px;
+    width: 80%;
     height: 900px;
     margin: 0 auto;
     order: 4;
     text-align: center;
     justify-content: center;
 }
-
+.carousel{
+    margin: 0 auto;
+}
 .carousel-slide {
     display: flex;
     flex-direction: column;
