@@ -143,7 +143,6 @@
 
 .carousel-slide {
     display: flex;
-    position: relative;
     flex-direction: column;
     align-items: center;
     transition: transform 0.5s ease-in-out;
