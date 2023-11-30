@@ -170,11 +170,15 @@
 }
 
 .prev {
-    left: 285px;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .next {
-    right: 255px;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .carousel-slide #img_and_p {
