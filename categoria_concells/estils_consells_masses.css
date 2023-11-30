@@ -131,14 +131,14 @@
 
 /* Estilització del contingut principal amb els consells/trucs */
 .carousel-container {
-    display: flex;
-    overflow: hidden;
-    width: 800px;
-    height: 900px;
-    margin: 0 auto;
-    order: 4;
-    text-align: center;
-    justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 80%px;
+  height: 90%px;
+  margin: 0 auto;
+  order: 4;
+  text-align: center;
+  justify-content: center;
 }
 
 .carousel-slide {
