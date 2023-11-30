@@ -160,7 +160,6 @@
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 50%;
-    bottom: 20px;
 }
 
 .arrow i {
@@ -231,7 +230,14 @@
 .image_container:hover {
     transform: scale(1.6);
 }
-
+@media (max-width: 768px) {
+    .arrow {
+        position: relative; /* Use relative positioning for smaller screens */
+        display: block; /* Adjust the display property as needed */
+        margin: 0 auto; /* Center the arrows horizontally */
+        bottom: auto; /* Reset the bottom property */
+    }
+}
 /* Visualització de com és mostraria el menu i les fletxes a una pantalla inferior a 550px */
 @media (max-width: 550px) {
     section {
@@ -254,11 +260,7 @@
     }
 
     .arrow {
-        position: relative;
         top: 450px;
-        display: block;
-        margin: 0 auto;
-        bottom: auto;
     }
 
     .next {
