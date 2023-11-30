@@ -8,6 +8,7 @@
     font-family: Arial, Helvetica, sans-serif;
     flex-flow: row wrap;
     display: flex;
+    
     background-color: #FFDAB9;
 }
 
@@ -262,9 +263,8 @@
         right: 45px;
     }
     .carousel-container, .carousel-slide #img_and_p, .carousel-slide {
-        width: 80%;
-        height: auto;
         margin: 0 auto;
+        width:50%;
     }
 
 }
