@@ -68,7 +68,7 @@ quan l pantalla és inferior a 550px */
       display: inline-block;
       position: fixed;
       top: 8px;
-      left: 180px;
+      left: 200px;
       padding: 10px;
       z-index: 2;
   }
