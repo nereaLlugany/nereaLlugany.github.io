@@ -252,12 +252,7 @@
     }
 
    .arrow {
-     position: static;
-     display: block;
-     margin: 10px auto;
-     top: auto;
-     left: auto;
-     right: auto;
+     top: 450px;
    }
     .prev {
         left: 65px;
@@ -266,4 +261,9 @@
     .next {
         right: 45px;
     }
+    .carousel-container {
+        width: 100%;
+        height: auto;
+    }
+
 }
