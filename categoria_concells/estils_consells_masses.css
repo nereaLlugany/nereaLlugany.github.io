@@ -133,18 +133,17 @@
 .carousel-container {
     display: flex;
     overflow: hidden;
-    width: 80%;
+    width: 800px;
     height: 900px;
     margin: 0 auto;
     order: 4;
     text-align: center;
     justify-content: center;
 }
-.carousel{
-    margin: 0 auto;
-}
+
 .carousel-slide {
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     transition: transform 0.5s ease-in-out;
@@ -181,8 +180,8 @@
 .carousel-slide #img_and_p {
     background-color: white;
     box-shadow: 2px 2px 5px black;
-    width: 70%;
-    height: auto;
+    width: 700px;
+    height: 700px;
     margin: 0 60px 50px 80px;
     padding-top: 40px;
     position: relative;
@@ -230,14 +229,7 @@
 .image_container:hover {
     transform: scale(1.6);
 }
-@media (max-width: 768px) {
-    .arrow {
-        position: relative; /* Use relative positioning for smaller screens */
-        display: block; /* Adjust the display property as needed */
-        margin: 0 auto; /* Center the arrows horizontally */
-        bottom: auto; /* Reset the bottom property */
-    }
-}
+
 /* Visualització de com és mostraria el menu i les fletxes a una pantalla inferior a 550px */
 @media (max-width: 550px) {
     section {
