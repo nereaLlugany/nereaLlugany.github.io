@@ -80,7 +80,7 @@ quan l pantalla és inferior a 550px */
       top: 0;
       display: block;
       height: 100%;
-      width: 230px;
+      width: 240px;
       background-color: #9e7250; 
       overflow-x: hidden;
       transition: 0.5s;
@@ -95,7 +95,7 @@ quan l pantalla és inferior a 550px */
 
   #menu .sidebar li {
       display: block;
-      margin: 40px;
+      margin: 30px;
   }
 
   .button {
