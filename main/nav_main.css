@@ -68,7 +68,7 @@ quan l pantalla és inferior a 550px */
       display: inline-block;
       position: fixed;
       top: 8px;
-      left: 200px;
+      left: 210px;
       padding: 10px;
       z-index: 2;
   }
@@ -84,7 +84,7 @@ quan l pantalla és inferior a 550px */
       background-color: #9e7250; 
       overflow-x: hidden;
       transition: 0.5s;
-      transform: translateX(-50px);
+      transform: translateX(-80px);
       z-index: 1;
   }
 
