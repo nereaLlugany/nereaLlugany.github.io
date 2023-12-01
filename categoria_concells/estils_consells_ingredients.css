@@ -147,13 +147,14 @@
     align-items: center;
     transition: transform 0.5s ease-in-out;
     width: 70%;
+    height: auto;
     max-width: 750px;
     margin: 0 auto;
 }
 
 .arrow {
     position: absolute;
-    top: 90%;
+    top: 85%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
@@ -182,8 +183,9 @@
 .carousel-slide #img_and_p {
     background-color: white;
     box-shadow: 2px 2px 5px black;
-    width: 700px;
-    height: 700px;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
     margin: 0 60px 50px 80px;
     padding-top: 40px;
     position: relative;
