@@ -150,8 +150,8 @@
 
 .arrow {
     position: absolute;
-    top: 50%;
-    transform: translateY(-75%);
+    top: 70%;
+    transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 10px 15px;
