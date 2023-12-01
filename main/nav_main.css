@@ -90,12 +90,12 @@ quan l pantalla és inferior a 550px */
 
   #menu .sidebar ul {
       list-style-type: none;
-      margin-top: 60px;
+      margin-top: 80px;
   }
 
   #menu .sidebar li {
       display: block;
-      margin: 40px;
+      margin: 20px;
   }
 
   .button {
