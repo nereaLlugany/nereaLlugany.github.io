@@ -174,7 +174,7 @@
 }
 
 .next {
-    right: 25%;
+    right: 23%;
 }
 
 .carousel-slide #img_and_p {
@@ -209,7 +209,7 @@
 .carousel-slide p {
     padding: 5px 5px 15px 5px;
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     font-size: 0.75em;
 }
@@ -250,5 +250,11 @@
     
     .dropdownButton {
         margin-top: 50px;
+    }
+    .prev{
+        left: 10%;
+    }
+    .next{
+        right: 10%;
     }
 }
