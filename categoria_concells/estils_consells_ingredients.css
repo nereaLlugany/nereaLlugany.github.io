@@ -177,7 +177,7 @@
 }
 
 .next {
-    right: 23%;
+    right: 20%;
 }
 
 .carousel-slide #img_and_p {
@@ -255,9 +255,9 @@
         margin-top: 50px;
     }
     .prev{
-        left: 10%;
+        left: 5%;
     }
     .next{
-        right: 10%;
+        right: 1%;
     }
 }
