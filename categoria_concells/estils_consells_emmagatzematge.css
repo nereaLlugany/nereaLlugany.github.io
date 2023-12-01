@@ -174,11 +174,11 @@
 }
 
 .prev {
-    left: 285px;
+    left: 25%;
 }
 
 .next {
-    right: 255px;
+    right: 20%;
 }
 
 .carousel-slide #img_and_p {
@@ -251,16 +251,5 @@
     
     .dropdownButton {
         margin-top: 50px;
-    }
-    .prev {
-        left: 65px;
-    }
-
-    .arrow {
-        top: 450px;
-    }
-
-    .next {
-        right: 45px;
     }
 }
