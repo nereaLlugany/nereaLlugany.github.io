@@ -3,7 +3,12 @@ function penjarImatge() {
     if (imgInput.length > 0){
         let fitxer = input.files[0];
         let formData = new FormData();
-        formData.append('image', file);
+        reader.onload = function (e) {
+            let newImg = document.createElement('img');
+            newImg.src = e.target.result;
+            let galeria = document.querySelector('.imatges_galeria');
+            reader.readAsDataURL(file)
+        }
     }
 
 }
