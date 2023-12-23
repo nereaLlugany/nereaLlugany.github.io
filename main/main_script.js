@@ -15,5 +15,5 @@ function penjarImatge() {
 }
 
 window.onload = function() {
-   document.getElementById("penjar").addEventListener("click", () => penjarImatge);
+    document.getElementById("penjar").addEventListener("click", penjarImatge);
 }
