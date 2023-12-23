@@ -1,20 +1,23 @@
-function toggleOverflow(button, sectionId) {
-    const section = document.getElementById(sectionId);
+function clickBotoSeeMore(buttonClass, sectionId) {
+    let buttons = document.querySelectorAll(buttonClass);
+    let container = document.getElementById(containerId);
 
-    button.addEventListener('click', function() {
-        if (section.style.overflow === 'hidden') {
-            section.style.overflow = 'visible';
-            button.textContent = 'See Less';
-        } else {
-            section.style.overflow = 'hidden';
-            button.textContent = 'See More';
-        }
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (section.style.overflow === 'hidden') {
+                section.style.overflow = 'visible';
+                button.textContent = 'See Less';
+            } else {
+                section.style.overflow = 'hidden';
+                button.textContent = 'See More';
+            }
+        });
     });
 }
 
 window.onload = function() {
-    const pastisseriaButton = document.getElementById('seeMoreCake');
-    const galetesButton = document.getElementById('seeMoreBiscuit');
-    const pansButton = document.getElementById('seeMoreBread');
-    const festesButton = document.getElementById('seeMoreSpecial');
-}
+    clickBotoSeeMore('.cake', 'pastisseria');
+    clickBotoSeeMore('.biscuit', 'galetes');
+    clickBotoSeeMore('.bread', 'pans');
+    clickBotoSeeMore('.special', 'festes');
+};
