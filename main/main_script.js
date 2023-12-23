@@ -1,18 +1,20 @@
 function penjarImatge() {
-    let input = document.getElementById('imatge');
-    let galeria = document.getElementById('galeria');
-    let imagePath = input.value; 
-    alert(imagePath);
+    var fileInput = document.getElementById('imatge');
+    var selectedFile = fileInput.files[0]; 
+    if (selectedFile) {
 
-    if (imagePath) {
-        let newImage = new Image();
-        newImage.src = imagePath; 
-        galeria.appendChild(newImage);
+        var reader = new FileReader();
+        reader.onload = function(event) {
+            var uploadedImageData = event.target.result;
+
+            console.log('File uploaded:', uploadedImageData);
+        };
+        reader.readAsDataURL(selectedFile);
     } else {
         alert('No file selected');
     }
 }
 
 window.onload = function() {
-    document.getElementById("penjar").addEventListener("click", penjarImatge);
-}
+    document.getElementById('penjar').addEventListener('click', penjarImatge);
+};
