@@ -154,7 +154,7 @@
 
 .arrow {
     position: absolute;
-    top: 85%;
+    top: 80%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
