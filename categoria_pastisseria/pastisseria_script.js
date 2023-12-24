@@ -36,12 +36,16 @@ function search(event) {
 
     if (searchInput === '') {
         alert("No heu entrat cap recepte", "");
+        searchedContainer.innerHTML = '';
+        for (let i = 0; i < recipeSections.length; i++) {
+            recipeSections[i].style.display = 'block';
+        }
     } else {
         for (let i = 0; i < recipeSections.length; i++) {
             recipeSections[i].style.display = 'none';
         }
         for (let i = 0; i < matchedRecipes.length; i++) {
-            searchedContainer.appendChild(matchedRecipes[i]);
+            searchedContainer.appendChild(matchedRecipes[i].cloneNode(true));
         }
     }  
 
