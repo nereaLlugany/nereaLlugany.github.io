@@ -22,11 +22,7 @@ function search(listSeeMoreButtons) {
     let categoryTitles = document.querySelectorAll('section>h2');
 
     if (searchQuery === '') {
-        for (let i = 0; i < recipeSections.length; i++) {
-            recipeSections[i].style.display = 'none';
-            listSeeMoreButtons[i].style.display = 'none';
-            categoryTitles[i].style.display = 'none'; 
-        }
+        alert("No has introduit ninguna recepta")
     } else {
         for (let i = 0; i < recipes.length; i++) {
             let recipe = recipes[i];
@@ -43,8 +39,7 @@ function search(listSeeMoreButtons) {
                 }
                 
             } else {
-                content.style.display = 'none';
-                categoryTitle.style.display = 'none';
+                alert("No s'ha pogut trobar nunguna recepte amb el nom: " + recipeTitle);
             }
         }
     }
