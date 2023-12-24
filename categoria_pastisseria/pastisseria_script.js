@@ -4,8 +4,9 @@ function seeMoreClicked(event) {
 
     for (let i = 0; i < contents.length; i++) {
         let content = contents[i];
+        let contentHeight = content.offsetHeight + 'px';
 
-        if (content.style.height === '310px') {
+        if (contentHeight === '310px') {
             content.style.height = 'auto';
             event.target.textContent = 'Show Less';
         } else {
@@ -15,7 +16,9 @@ function seeMoreClicked(event) {
     }
 }
 
-function search() {
+
+function search(event) {
+    event.preventDefault();
     let searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
     let searchedContainer = document.querySelector('.searched-recipies');
 
@@ -43,7 +46,7 @@ function search() {
     }  
 
     if (matchedRecipes.length === 0) {
-        alert('No matching recipes found!');
+        alert('No hi ha cap recepte amb aquest nom');
     }
 }
 
@@ -59,12 +62,12 @@ window.onload = function() {
     }
 
     searchButton.addEventListener('click', function() {
-        search()
+        search(event)
     });
 
     searchInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-            search();
+            search(event);
         }
     });
 };
