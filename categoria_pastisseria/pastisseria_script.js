@@ -1,23 +1,27 @@
-function clickBotoSeeMore(buttonClass, sectionId) {
-    let buttons = document.querySelectorAll(buttonClass);
-    let container = document.getElementById(containerId);
+function seeMoreClicked(event) {
+    let section = event.target.parentElement;
+    let contents = section.querySelectorAll('.pastisseria, .galetes, .pans, .festes');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            if (section.style.overflow === 'hidden') {
-                section.style.overflow = 'visible';
-                button.textContent = 'See Less';
-            } else {
-                section.style.overflow = 'hidden';
-                button.textContent = 'See More';
-            }
-        });
-    });
+    for (let i = 0; i < contents.length; i++) {
+        let content = contents[i];
+
+        
+        if (content.style.height === '310px') {
+            content.style.height = 'auto';
+            event.target.textContent = 'Show Less';
+        } else {
+            content.style.height = '310px';
+            event.target.textContent = 'See More';
+        }
+    }
 }
 
 window.onload = function() {
-    clickBotoSeeMore('.cake', 'pastisseria');
-    clickBotoSeeMore('.biscuit', 'galetes');
-    clickBotoSeeMore('.bread', 'pans');
-    clickBotoSeeMore('.special', 'festes');
+    var seeMoreButtons = document.querySelectorAll('#seeMoreButton');
+
+    for (let i = 0; i < seeMoreButtons.length; i++) {
+        let button = seeMoreButtons[i];
+        
+        button.addEventListener('click', seeMoreClicked);
+    }
 };
