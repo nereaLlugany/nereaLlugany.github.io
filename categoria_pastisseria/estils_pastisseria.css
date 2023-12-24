@@ -106,7 +106,7 @@ section {
 .pastisseria>div,
 .pans>div,
 .galetes>div,
-.festes>div {
+.festes>div, .searched-recipies>div{
     display: inline-block;
     padding: 10px;
     vertical-align: top;
@@ -116,10 +116,11 @@ section {
     height: 260px;
 }
 
+
 .pastisseria>div:nth-child(odd),
 .pans>div:nth-child(odd),
 .galetes>div:nth-child(odd),
-.festes>div:nth-child(odd) {
+.festes>div:nth-child(odd), .searched-recipies>div:nth-child(odd){
     background-color: #e7be72; 
     border-radius: 5px;
 }
@@ -127,7 +128,7 @@ section {
 .pastisseria>div:nth-child(even),
 .pans>div:nth-child(even),
 .galetes>div:nth-child(even),
-.festes>div:nth-child(even) {
+.festes>div:nth-child(even), .searched-recipies>div:nth-child(even) {
     background-color: #cd853f; 
     border-radius: 5px;
 }

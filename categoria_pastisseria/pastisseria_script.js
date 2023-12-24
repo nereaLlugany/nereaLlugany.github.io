@@ -15,75 +15,56 @@ function seeMoreClicked(event) {
     }
 }
 
-function search(listSeeMoreButtons) {
-    let searchQuery = document.getElementById('searchInput').value.toLowerCase();
-    let recipes = document.querySelectorAll('.pastisseria h4, .galetes h4, .pans h4, .festes h4');
-    let recipeSections = document.querySelectorAll('.pastisseria, .galetes, .pans, .festes');
-    let categoryTitles = document.querySelectorAll('section>h2');
+function search() {
+    let searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
+    let searchedContainer = document.querySelector('.searched-recipies');
 
-    if (searchQuery === '') {
-        alert("No has introduit ninguna recepta")
-    } else {
-        for (let i = 0; i < recipes.length; i++) {
-            let recipe = recipes[i];
-            let recipeTitle = recipe.textContent.toLowerCase();
-            let categoryTitle = recipe.parentElement.parentElement.parentElement.querySelector('h2');
-            let content = recipe.parentElement;
+    let recipeTitles = document.querySelectorAll('h4');
+    let matchedRecipes = [];
 
-            if (recipeTitle.includes(searchQuery)) {
-                content.style.display = 'block';
-                recipeSections[i].style.display = 'block'; 
-                categoryTitle.style.display = 'block';
-                for (let j = 0; j < listSeeMoreButtons.length; j++){
-                    listSeeMoreButtons[j].style.display = 'none';
-                }
-                
-            } else {
-                alert("No s'ha pogut trobar nunguna recepte amb el nom: " + recipeTitle);
-            }
+    for (let i = 0; i < recipeTitles.length; i++) {
+        if (recipeTitles[i].textContent.trim().toLowerCase().includes(searchInput)) {
+            let recipeContent = recipeTitles[i].parentElement;
+            matchedRecipes.push(recipeContent);
         }
+    }
+
+    let recipeSections = document.querySelectorAll('#pastisseria_categoria, #galetes_categoria, #pans_categoria, #festes_categoria');
+
+    if (searchInput === '') {
+        alert("No heu entrat cap recepte", "");
+    } else {
+        for (let i = 0; i < recipeSections.length; i++) {
+            recipeSections[i].style.display = 'none';
+        }
+        for (let i = 0; i < matchedRecipes.length; i++) {
+            searchedContainer.appendChild(matchedRecipes[i]);
+        }
+    }  
+
+    if (matchedRecipes.length === 0) {
+        alert('No matching recipes found!');
     }
 }
 
 
 window.onload = function() {
-
-    let toggleButton = document.querySelector('.toggle-button');
-    let sidebar = document.querySelector('.sidebar');
-    let closeButton = document.querySelector('.close-button');
-
-    toggleButton.addEventListener('click', function() {
-        if (sidebar.style.transform === 'translateX(-300px)') {
-            sidebar.style.transform = 'translateX(-5px)';
-            setTimeout(function() {
-                closeButton.style.display = 'inline-block';
-            }, 225);
-          } else {
-            sidebar.style.transform = 'translateX(-300px)';
-            closeButton.style.display = 'none';
-          }
-    });
-
-    closeButton.addEventListener('click', function() {
-        sidebar.style.transform = 'translateX(-300px)';
-        closeButton.style.display = 'none';
-    });
-
+    let searchButton = document.querySelector('form button');
+    let searchInput = document.getElementById('searchInput');
     let seeMoreButtons = document.querySelectorAll('#seeMoreButton');
-    let searchForm = document.querySelector('form');
-    let searchInput = searchForm.querySelector('input[name="search"]');
-    let searchButton = searchForm.querySelector('form>button');
 
     for (let i = 0; i < seeMoreButtons.length; i++) {
         let button = seeMoreButtons[i];
         button.addEventListener('click', seeMoreClicked);
     }
 
-    searchButton.addEventListener('click', () => search(seeMoreButtons));
+    searchButton.addEventListener('click', function() {
+        search()
+    });
 
     searchInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-            search(seeMoreButtons);
+            search();
         }
     });
 };
