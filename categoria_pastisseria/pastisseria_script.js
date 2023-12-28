@@ -1,3 +1,5 @@
+let previousSearchQuery = '';
+
 // Funció que gestiona el clic al botó "See More"
 function seeMoreClicked(event) {
     // Obté la secció pare de l'element clicat
@@ -20,6 +22,17 @@ function seeMoreClicked(event) {
     }
 }
 
+//Funció per mirar si la recepte ja existeix
+function recipeTitleExists(container, title) {
+    let recipeTitles = container.querySelectorAll('h4');
+    for (let i = 0; i < recipeTitles.length; i++) {
+        if (recipeTitles[i].textContent.trim().toLowerCase() === title.toLowerCase()) {
+            return true; 
+        }
+    }
+    return false; 
+}
+
 // Funció que gestiona la cerca de receptes
 function search(event) {
     event.preventDefault();
@@ -31,11 +44,15 @@ function search(event) {
     let recipeTitles = document.querySelectorAll('h4');
     let matchedRecipes = [];
 
+    if (searchInput === previousSearchQuery) {
+        return;
+    }
+
     // Itera a través dels títols de receptes per a la cerca i mira quins coincideixen amb la recepte cercada
     for (let i = 0; i < recipeTitles.length; i++) {
         if (recipeTitles[i].textContent.trim().toLowerCase().includes(searchInput)) {
             let recipeContent = recipeTitles[i].parentElement;
-            if (!matchedRecipes.includes(recipeContent)) {
+            if (!recipeTitleExists(searchedContainer, recipeTitles[i].textContent.trim())) {
                 matchedRecipes.push(recipeContent);
             }
         }
@@ -69,6 +86,8 @@ function search(event) {
             recipeSections[i].style.display = 'block';
         }
     }
+
+    previousSearch = searchInput;
 }
 
 window.onload = function() {
@@ -102,8 +121,8 @@ window.onload = function() {
     }
 
     // Gestiona la cerca quan es fa clic al botó de cerca o es prem Enter des del camp de cerca
-    searchButton.addEventListener('click', function() {
-        search(event)
+    searchButton.addEventListener('click', function(event) {
+        search(event);
     });
 
     searchInput.addEventListener('keydown', function(event) {
