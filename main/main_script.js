@@ -1,5 +1,6 @@
 // Funció que afageix una imatge a la galeria
-function penjarImatge() {
+function penjarImatge(event) {
+    event.preventDefault();
     // Obté la ruta de l'arxiu d'imatge des de l'element amb l'id 'imatge'
     let filePath = document.getElementById('imatge').value;
 
