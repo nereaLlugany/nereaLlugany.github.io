@@ -78,5 +78,7 @@ window.onload = function() {
     });
 
     // Assigna la funció 'penjarImatge()' a l'esdeveniment de clic al botó amb l'id 'penjar'
-    document.getElementById('penjar').addEventListener('click', penjarImatge);
+    document.getElementById('penjar').addEventListener('click', function (){
+        penjarImatge(evt)
+    });
 }
