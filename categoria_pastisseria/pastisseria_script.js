@@ -35,12 +35,16 @@ function search(event) {
     for (let i = 0; i < recipeTitles.length; i++) {
         if (recipeTitles[i].textContent.trim().toLowerCase().includes(searchInput)) {
             let recipeContent = recipeTitles[i].parentElement;
-            matchedRecipes.push(recipeContent);
+            if (!matchedRecipes.includes(recipeContent)) {
+                matchedRecipes.push(recipeContent);
+            }
         }
     }
 
     // Obté les seccions de categories de receptes
     let recipeSections = document.querySelectorAll('#pastisseria_categoria, #galetes_categoria, #pans_categoria, #festes_categoria');
+
+    searchedContainer.innerHTML = '';
 
     // Gestiona els resultats de la cerca per mostrar els elements que coincideixen amb la cerca
     if (searchInput === '') {
@@ -61,6 +65,9 @@ function search(event) {
     // Mostra un missatge d'alerta si no es troben receptes
     if (matchedRecipes.length === 0) {
         alert('No hi ha cap recepte amb aquest nom');
+        for (let i = 0; i < recipeSections.length; i++) {
+            recipeSections[i].style.display = 'block';
+        }
     }
 }
 
