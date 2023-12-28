@@ -121,8 +121,8 @@ window.onload = function() {
     }
 
     // Gestiona la cerca quan es fa clic al botó de cerca o es prem Enter des del camp de cerca
-    searchButton.addEventListener('click', function(event) {
-        search(event);
+    searchButton.addEventListener('click', function() {
+        search();
     });
 
     searchInput.addEventListener('keydown', function(event) {
