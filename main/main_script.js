@@ -1,6 +1,7 @@
 // Funció per pujar una imatge i afegir-la a una galeria d'imatges
 function penjarImatge(evt) {
     evt.preventDefault(); 
+    console.log(evt.preventDefault());
     // Obtenir el primer arxiu seleccionat a través de l'element amb ID 'imatge'
     let fileInput = document.getElementById('imatge').files[0];
 
