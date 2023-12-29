@@ -1,4 +1,4 @@
-let previousSearchQuery = '';
+let previousSearch = '.@#$%&';
 
 // Funció que gestiona el clic al botó "See More"
 function seeMoreClicked(event) {
@@ -44,8 +44,8 @@ function search(event) {
     let recipeTitles = document.querySelectorAll('h4');
     let matchedRecipes = [];
 
-    if (searchInput === previousSearchQuery) {
-        return;
+    if (searchInput === previousSearch && previousSearch !== "") {
+        return 0;
     }
 
     // Itera a través dels títols de receptes per a la cerca i mira quins coincideixen amb la recepte cercada
@@ -69,6 +69,7 @@ function search(event) {
         searchedContainer.innerHTML = '';
         for (let i = 0; i < recipeSections.length; i++) {
             recipeSections[i].style.display = 'block';
+            previousSearch = '.@#$%&';
         }
     } else {
         for (let i = 0; i < recipeSections.length; i++) {
