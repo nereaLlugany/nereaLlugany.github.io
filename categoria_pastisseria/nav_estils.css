@@ -162,6 +162,7 @@ quan l pantalla és inferior a 550px */
     .search input[type=text] {
         width: auto;
         height: 39px;
+        margin-top: 40px;
     }
 
     .search button {
